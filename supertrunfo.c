@@ -5,7 +5,7 @@ int main(){
 
     //Array e variáveis Carta 1
     
-    char estado1[50], nome_cidade[50], codigo1[4]; // %c char é para ler um caractere
+    char estado1, nome_cidade[50], codigo1[4]; // %c char é para ler um caractere
     int populacao1, turistico1; // %d População da cidade
     float area1, pib1;  // %f Área da cidade
 
@@ -15,7 +15,7 @@ int main(){
     printf("\n--Informações da carta 1--\n");
 
     printf("Digite o estado de 'A' a 'H': ");
-    scanf("%s", estado1); // %s string é para ler uma string (sequência de caracteres)
+    scanf(" %c", &estado1); // %s string é para ler uma string (sequência de caracteres)
     printf("Digite o código postal: ");
     scanf("%s", &codigo1); // %s string é para ler uma string (sequência de caracteres)  
     printf("Nome da cidade: ");
@@ -31,7 +31,7 @@ int main(){
 
     //Array e variáveis arta 2
 
-    char estado2[50], nome_cidade2[50], codigo2[4]; // %c char é para ler um caractere
+    char estado2, nome_cidade2[50], codigo2[4]; // %c char é para ler um caractere
     int populacao2, turistico2; // %d População da cidade   
     float area2, pib2;  // %f Área da cidade
 
@@ -42,7 +42,7 @@ int main(){
     printf("\n--De as informações da carta 2--\n");
     
     printf("Digite o estado de 'A' a 'H':");
-    scanf("%s", estado2);
+    scanf(" %c", &estado2);
     printf("Digite o código postal: ");
     scanf("%s", &codigo2);
     printf("Nome da cidade: ");
@@ -60,7 +60,7 @@ int main(){
 
     printf("\nINFORMAÇÕES DA CARTA 1\n");
 
-    printf("ESTADO: %s\n", estado1);
+    printf("ESTADO: %c\n", estado1);
     printf("Código Postal: %s\n", codigo1);
     printf("Nome da cidade: %s\n", nome_cidade);
     printf("População: %d\n", populacao1);
@@ -71,11 +71,11 @@ int main(){
     //Saida dos sados - Carta 2
 
     printf("\nINFORMAÇÕES DA CARTA 2\n");
-    printf("ESTADO: %s\n", estado2);
+    printf("ESTADO: %c\n", estado2);
     printf("Código Postal: %s\n", codigo2);
     printf("Nome da cidade: %s\n", nome_cidade2);
     printf("População: %d\n", populacao2);	
-    printf("Área: %.1f km²\n", area2); // %.3f float é para ler um número de ponto flutuante (decimal) com 3 casas decimais, ou seja , eu posso colocar a  área real 
+    printf("Área: %.1f km²\n", area2); // %.1f float é para ler um número de ponto flutuante (decimal) com  casas decimais, ou seja , eu posso colocar a  área real 
     printf("PIB: %.2f\n", pib2);
     printf("Número de pontos turísticos: %d\n", turistico2);
 
