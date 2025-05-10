@@ -74,16 +74,6 @@ int main(){
     superpoder1 = (double) populacao1 + area1 + pib1 + turistico1 + percap1 + densinversa2; // Atenção: superpoder1 usa densinversa2.
     superpoder2 = (double) populacao2 + area2 + pib2 + turistico2 + percap2 + densinversa2; 
 
-    //comparação total - PARA VENCEDOR
- 
-    int v1 = populacao1 > populacao2;
-    int v2 = area1 > area2;
-    int v3 = pib1 > pib2;
-    int v4 = turistico1 > turistico2;
-    int v5 = densidade1 < densidade2; // o professor pede que a menor densidade vença 
-    int v6 = percap1 > percap2;
-    int v7 = superpoder1 > superpoder2;
-
     //Saida dos sados - Carta 1
     printf("\nINFORMAÇÕES DA CARTA 1\n");
 
@@ -111,15 +101,36 @@ int main(){
     printf("PIB per Capita: %.2f\n reais", percap2);
 
 
-    //Saida dos sados - do vendedor da carta
-    printf("\n\n--Resultado da Vencedores--\n");
-    printf("Populacao - %s venceu! (Resultado: %d)\n", v1 ? "Carta 1" : "Carta 2", v1); //Esse operador avalia a condição: se ela for verdadeira, o valor após o ? é retornado; se for falsa, o valor após o : é retornado.
-    printf("Area - %s venceu! (Resultado: %d)\n", v2 ? "Carta 1" : "Carta 2", v2);
-    printf("PIB - %s venceu! (Resultado: %d)\n", v3 ? "Carta 1" : "Carta 2", v3);
-    printf("Pontos Turisticos - %s venceu! (Resultado: %d)\n", v4 ? "Carta 1" : "Carta 2", v4);
-    printf("Densidade Populacional (menor vence) - %s venceu! (Resultado: %d)\n", v5 ? "Carta 1" : "Carta 2", v5);
-    printf("PIB per Capita - %s venceu! (Resultado: %d)\n", v6 ? "Carta 1" : "Carta 2", v6);
-    printf("Super Poder - %s venceu! (Resultado: %d)\n", v7 ? "Carta 1" : "Carta 2", v7);
+    //Saida dos sados e comparação - do vendedor da carta
+    if (populacao1 > populacao2) {
+        printf("Carta 1 Venceu!\n");
+    } else {
+        printf("Carta 2 Venceu!\n");
+    } if (area1 > area2) {
+        printf("Carta 1 Venceu!\n");
+    } else {
+        printf("Carta 2 Venceu!\n");
+    } if (pib1 > pib2) {
+        printf("Carta 1 Venceu!\n");
+    } else {
+        printf("Carta 2 Venceu!\n");
+    } if (turistico1 > turistico2) {
+        printf("Carta 1 Venceu!\n");
+    } else {
+        printf("Carta 2 Venceu!\n");
+    } if (densidade1 < densidade2) {
+        printf("Carta 1 Venceu! - Carta Menor\n");
+    } else {
+        printf("Carta 2 Venceu! - Carta Menor\n");
+    } if (percap1 > percap2) {
+        printf("Carta 1 Venceu!\n");
+    } else {
+        printf("Carta 2 Venceu!\n");
+    } if (superpoder1 > superpoder2) {
+        printf("Carta 1 Venceu!\n");
+    } else {
+        printf("Carta 2 Venceu!\n");
+    }
 
     return 0;
 }
