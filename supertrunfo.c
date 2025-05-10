@@ -58,10 +58,10 @@ int main(){
     double percap1, percap2, pib1edensidade1, pib1edensidade2, densinversa1, densinversa2; 
     
     densidade1 = (float) populacao1 / area1;
-    percap1 = (double) (pib1 * 1000000000) / populacao1; /*O PIB está em bilhões de reais: Quando você recebe o PIB como Exemplo: 699.28 (por exemplo), ele está em bilhões de reais. Então, 699.28 bilhões de reais significa 699.280.000.000 reais.
+    percap1 = (double) (pib1 * 1e9) / populacao1; /* 1e9 = 1.000.000.000 - O PIB está em bilhões de reais: Quando você recebe o PIB como Exemplo: 699.28 (por exemplo), ele está em bilhões de reais. Então, 699.28 bilhões de reais significa 699.280.000.000 reais.
     Multiplicando por 1 bilhão (1000000000): Para transformar o valor de bilhões para reais (a unidade mais comum para cálculos), a gente multiplica o PIB por 1 bilhão (ou seja, 1.000.000.000). Então, multiplicando:*/
     densidade2 = (float) populacao2 / area1; // Atenção: Esta linha usa area1 para calcular densidade2. Pode ser um erro lógico.
-    percap2 = (double) (pib2 * 1000000000) / populacao2;
+    percap2 = (double) (pib2 * 1e9) / populacao2; //1e9 = 1.000.000.000 - O PIB está em bilhões de reais: Quando você recebe o PIB como Exemplo: 699.28 (por exemplo), ele está em bilhões de reais. Então, 699.28 bilhões de reais significa 699.280.000.000 reais.
 
     //calculo do densidade populacional per capita 1 E 2
     pib1edensidade1 = (double) densidade1 / percap1; // PIB per capita da cidade 1
@@ -102,35 +102,36 @@ int main(){
 
 
     //Saida dos sados e comparação - do vendedor da carta
-    if (populacao1 > populacao2) {
-        printf("Carta 1 Venceu!\n");
-    } else {
-        printf("Carta 2 Venceu!\n");
-    } if (area1 > area2) {
-        printf("Carta 1 Venceu!\n");
-    } else {
-        printf("Carta 2 Venceu!\n");
-    } if (pib1 > pib2) {
-        printf("Carta 1 Venceu!\n");
-    } else {
-        printf("Carta 2 Venceu!\n");
-    } if (turistico1 > turistico2) {
-        printf("Carta 1 Venceu!\n");
-    } else {
-        printf("Carta 2 Venceu!\n");
-    } if (densidade1 < densidade2) {
-        printf("Carta 1 Venceu! - Carta Menor\n");
-    } else {
-        printf("Carta 2 Venceu! - Carta Menor\n");
-    } if (percap1 > percap2) {
-        printf("Carta 1 Venceu!\n");
-    } else {
-        printf("Carta 2 Venceu!\n");
-    } if (superpoder1 > superpoder2) {
-        printf("Carta 1 Venceu!\n");
-    } else {
-        printf("Carta 2 Venceu!\n");
-    }
+    printf("\n--- Resultado do Vencedor ---\n");
 
+    if (populacao1 > populacao2) {
+        printf("População: Carta 1 Venceu! (1)\n");
+    } else {
+        printf("População: Carta 2 Venceu! (0)\n");
+    } if (area1 > area2) {
+        printf("ÁREA: Carta 1 Venceu! (1)\n");
+    } else {
+        printf("ÁREA: Carta 2 Venceu! (0)\n");
+    } if (pib1 > pib2) {
+        printf("PIB: Carta 1 Venceu! (1)\n");
+    } else {
+        printf("PIB: Carta 2 Venceu! (0)\n");
+    } if (turistico1 > turistico2) {
+        printf("Ponto Turístico: Carta 1 Venceu! (1)\n");
+    } else {
+        printf("Ponto Turístico: Carta 2 Venceu! (0)\n");
+    } if (densidade1 < densidade2) {
+        printf("Densidade Populacional: Carta 1 Venceu! - Carta Menor (1)\n");
+    } else {
+        printf("Densidade Populacional: Carta 2 Venceu! - Carta Menor (0)\n");
+    } if (percap1 > percap2) {
+        printf("PIB per Cap: Carta 1 Venceu! (1)\n");
+    } else {
+        printf("PIB per Cap: Carta 2 Venceu! (0)\n");
+    } if (superpoder1 > superpoder2) {
+        printf("Super Poder: Carta 1 Venceu! (1)\n");
+    } else {
+        printf("Super Poder: Carta 2 Venceu! (0)\n");
+    }
     return 0;
 }
